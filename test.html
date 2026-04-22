@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Donut Shop</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #e0eafc 0%, #cfdef3 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      padding: 1.5rem;
+    }
+
+    /* ----- main card container (div with style) ----- */
+    .card {
+      max-width: 400px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 32px 48px -16px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-header {
+      padding: 1.75rem 1.75rem 1.25rem 1.75rem;
+      background: #ffffff;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .card-header h2 {
+	  font-family: "Sekuya", system-ui;
+      font-size: 1.2rem;
+      font-weight: 400;
+      background: linear-gradient(135deg, #1f2b3c, #2c3e50);
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+	  text-align: center;
+    }
+
+    .card-header .subhead {
+      font-size: 0.9rem;
+      color: #5b6e8c;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+	  justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .card-header .subhead span {
+      background: #eef2fa;
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2c5282;
+    }
+
+    .card-header p {
+      margin-top: 0.9rem;
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: #2d3e50;
+      font-weight: 400;
+	  text-align: center
+    }
+
+    .header-divider {
+      width: 50px;
+      height: 3px;
+      background: #cbdde9;
+      border-radius: 4px;
+      margin-top: 1rem;
+	  margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card-image-bottom {
+      display: block;
+      width: 100%;
+      background-color: #f8fafd;
+      line-height: 0;/* removes extra spacing below image */
+      border-top: 1px solid #edf2f7;
+    }
+
+    .card-image-bottom img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    /* subtle zoom on image when hovering card (optional but nice) */
+    .card:hover .card-image-bottom img {
+      transform: scale(1.02);
+    }
+
+    /* footer / extra micro info (optional but adds style consistency) */
+    .image-meta {
+      background: #ffffff;
+      padding: 0.85rem 1.75rem 1.5rem 1.75rem;
+      font-size: 0.75rem;
+      color: #6c7f99;
+      text-align: center;
+      border-top: 1px solid #f0f4fa;
+      letter-spacing: 0.3px;
+    }
+
+    .image-meta a {
+      color: #2c5282;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    
+    @media (max-width: 480px) {
+      .card {
+        max-width: 100%;
+        border-radius: 1.5rem;
+      }
+      .card-header {
+        padding: 1.5rem 1.25rem 1rem 1.25rem;
+      }
+      .card-header h2 {
+        font-size: 1.65rem;
+      }
+      .image-meta {
+        padding: 0.8rem 1.25rem 1.25rem 1.25rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-header">
+    <h2>Donut shop</h2>
+    <div class="subhead">
+      <span>ocean collection</span>
+    </div>
+    <p>Very testy one. Cannot live without it!</p>
+    <div class="header-divider"></div>
+  </div>
+  <div class="card-image-bottom">
+    <img 
+      src="https://static-algoritmika-org.ngcdn.ru/uploads/2023/02/donut.png" 
+      alt="image at bottom"
+      loading="lazy"
+    >
+  </div>
+  <div class="image-meta">
+    Just a text <a href="#">explore coast</a>
+  </div>
+</div>
+</body>
+</html>
